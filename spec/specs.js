@@ -10,4 +10,8 @@ describe("triangle", function() {
 	it("is an isosceles triangle if two side are equal but their sum is greater than or equal to the third side", function() {
 		triangle(4, 4, 6).should.equal(true);
 	});
+
+	it("is a scalene triangle if none of the sides are equal to each other", function() {
+		triangle(2, 5, 4).should.equal(true);
+	});
 });

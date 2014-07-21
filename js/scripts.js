@@ -10,14 +10,17 @@ var triangle = function(sideA, sideB, sideC) {
   var resultScalene = false;
 
   if((side1 + side2) <= side3 || (side2 + side3) <= side1 || (side1 + side3) <= side2) {
-    resultNoTriangle = true;
-    return resultNoTriangle;
+      resultNoTriangle = true;
+      return resultNoTriangle;
   } else if (side1 === side2 && side2 === side3) {
-    resultEquilateral = true;
-    return resultEquilateral;
+      resultEquilateral = true;
+      return resultEquilateral;
   } else if (side1 === side2 || side2 === side3 || side1 === side3) {
-    resultIsosceles = true;
-    return resultIsosceles;
+      resultIsosceles = true;
+      return resultIsosceles;
+  } else if (side1 !== side2 && side2 !== side3 && side3 !== side1) {
+      resultScalene = true;
+      return resultScalene;
   }
 
 };
