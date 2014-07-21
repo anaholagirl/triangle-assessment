@@ -11,7 +11,10 @@ var triangle = function(sideA, sideB, sideC) {
 
   if((side1 + side2) <= side3 || (side2 + side3) <= side1 || (side1 + side3) <= side2) {
     resultNoTriangle = true;
-  
+    return resultNoTriangle;
+  } else if (side1 === side2 && side2 === side3) {
+    resultEquilateral = true;
+    return resultEquilateral;
   }
-  return resultNoTriangle;
+
 };
