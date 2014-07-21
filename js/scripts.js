@@ -15,6 +15,9 @@ var triangle = function(sideA, sideB, sideC) {
   } else if (side1 === side2 && side2 === side3) {
     resultEquilateral = true;
     return resultEquilateral;
+  } else if (side1 === side2 || side2 === side3 || side1 === side3) {
+    resultIsosceles = true;
+    return resultIsosceles;
   }
 
 };
